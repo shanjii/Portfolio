@@ -79,11 +79,9 @@ class Home extends Component {
     return (
       <section id={this.state.theme === 'light' ? 'homeLight' : 'homeDark'}>
         <div>
-          <StyleRoot>
-            <div style={styles.slideInLeft}>
-              <Navbar Theme={this.state.theme === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
-            </div>
-          </StyleRoot>
+          <div>
+            <Navbar Theme={this.state.theme === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
+          </div>
           <div id={this.state.theme === 'light' ? 'mainBoxLight' : 'mainBoxDark'}>
             <div className="presentation">
               <h1 className="title">{this.state.title}</h1>
