@@ -6,7 +6,7 @@ import Radium, { StyleRoot } from 'radium';
 
 const styles = {
   slideInLeft: {
-    animation: 'x 1s',
+    animation: 'x 2.5s',
     animationName: Radium.keyframes(slideInLeft, 'slideInLeft')
   }
 }
@@ -89,9 +89,11 @@ class Home extends Component {
               <h1 className="title">{this.state.title}</h1>
               <h2 className="subtitle">{this.state.subtitle}</h2>
             </div>
-            <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
-              <p>\\\\\\\\\\\\\\</p>
-            </div>
+            <StyleRoot>
+              <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
+                <p>\\\\\\\\\\\\\\</p>
+              </div>
+            </StyleRoot>
           </div>
         </div>
       </section>
