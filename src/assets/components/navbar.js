@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery'
 import '../styles/navbar.css'
 import Switch from '@material-ui/core/Switch';
 
@@ -10,7 +9,7 @@ class Navbar extends Component {
         return (
             <section className={this.props.Theme}>
                 <div className="avatar">
-                    <img className="avatarIcon" src={require('../images/shanji.png')}/>
+                    <img alt="icon" className="avatarIcon" src={require('../images/shanji.png')}/>
                 </div>
                 <div className="switch">
                     <Switch onChange={this.props.ChangeTheme} />

@@ -78,7 +78,6 @@ class Home extends Component {
               <h2 className="subtitle">{this.state.subtitle}</h2>
             </div>
             <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
-              <p>//////////////////////</p>
             </div>
           </div>
         </div>
