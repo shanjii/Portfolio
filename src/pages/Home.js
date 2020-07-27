@@ -6,7 +6,7 @@ import Radium, { StyleRoot } from 'radium';
 
 const styles = {
   slideInLeft: {
-    animation: 'x 2.5s',
+    animation: 'x 2s',
     animationName: Radium.keyframes(slideInLeft, 'slideInLeft')
   }
 }
@@ -19,7 +19,7 @@ class Home extends Component {
       theme: 'light',
       subtitle: '',
       title: '',
-      array: ['V', 'i', 'c', 't', 'o', 'r', ' ', 'A', 'r', 'o'],
+      array: ['<', 'V', 'i', 'c', 't', 'o', 'r', '_', 'A', 'r', 'o', '/', '>'],
       array2: ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.', ' ', '|']
     }
   }
@@ -91,7 +91,7 @@ class Home extends Component {
             </div>
             <div>
               <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
-                <p>\\\\\\\\\\\\\\</p>
+                <p>\\\\\\\\\\\\\\\\\\\\\\\</p>
               </div>
             </div>
           </div>
