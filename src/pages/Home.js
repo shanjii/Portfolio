@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import $, { map } from 'jquery'
 import Navbar from '../assets/components/navbar'
 import '../assets/styles/home.css'
-import Paper from '@material-ui/core/Paper';
 
 
 class Home extends Component {
@@ -50,7 +48,7 @@ class Home extends Component {
   titleLoop() {
     var i = 0
     setInterval(() => {
-      if (i == 0) {
+      if (i === 0) {
         this.setState({ subtitle: 'Software Developer' })
         i = 1
       } else {
@@ -72,14 +70,16 @@ class Home extends Component {
   render() {
     return (
       <section id={this.state.theme === 'light' ? 'homeLight' : 'homeDark'}>
-        <Navbar Theme={this.state.theme === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
-        <div id={this.state.theme === 'light' ? 'mainBoxLight' : 'mainBoxDark'}>
-          <div className="presentation">
-            <h1 className="title">{this.state.title}</h1>
-            <h2 className="subtitle">{this.state.subtitle}</h2>
-          </div>
-          <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
-            <p>//////////////////////</p>
+        <div>
+          <Navbar Theme={this.state.theme === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
+          <div id={this.state.theme === 'light' ? 'mainBoxLight' : 'mainBoxDark'}>
+            <div className="presentation">
+              <h1 className="title">{this.state.title}</h1>
+              <h2 className="subtitle">{this.state.subtitle}</h2>
+            </div>
+            <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
+              <p>//////////////////////</p>
+            </div>
           </div>
         </div>
       </section>
