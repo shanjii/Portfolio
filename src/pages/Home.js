@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import Navbar from '../assets/components/navbar'
 import '../assets/styles/home.css'
+import { slideInLeft } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
 
+const styles = {
+  slideInLeft: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(slideInLeft, 'slideInLeft')
+  }
+}
 
 class Home extends Component {
 
@@ -71,7 +79,11 @@ class Home extends Component {
     return (
       <section id={this.state.theme === 'light' ? 'homeLight' : 'homeDark'}>
         <div>
-          <Navbar Theme={this.state.theme === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
+          <StyleRoot>
+            <div style={styles.slideInLeft}>
+              <Navbar Theme={this.state.theme === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
+            </div>
+          </StyleRoot>
           <div id={this.state.theme === 'light' ? 'mainBoxLight' : 'mainBoxDark'}>
             <div className="presentation">
               <h1 className="title">{this.state.title}</h1>
