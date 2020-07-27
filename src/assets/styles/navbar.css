@@ -60,16 +60,18 @@
 }
 
 .avatar {
-    margin-left: 10px;
+    margin-left: 7px;
     margin-top: 10px;
 }
 
 .navLight:hover .avatarIcon {
+    margin-top: 60px;
     margin-left: 7px;
     width: 160px;
 }
 
 .navDark:hover .avatarIcon {
+    margin-top: 60px;
     margin-left: 7px;
     width: 160px;
 }
@@ -77,5 +79,6 @@
 .avatarIcon {
     transition: ease-in, 200ms;
     width: 70px;
+    border-style: solid;
     border-radius: 100px;
 }
