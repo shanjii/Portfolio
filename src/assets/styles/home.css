@@ -1,6 +1,11 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
 #mainBoxLight {
     overflow-x: hidden;
-    overflow-y: hidden;
     display: flex;
     transition: ease-in, 300ms;
     background-color: rgb(243, 243, 243);
@@ -11,7 +16,6 @@
 #mainBoxDark {
     overflow-x: hidden;
     display: flex;
-    overflow-y: hidden;
     transition: ease-in, 300ms;
     background-color: rgb(58, 58, 58);
     height: 100vh;
@@ -46,8 +50,7 @@
     top: -110px;
 }
 
-
-.slide{
+.slide {
     position: fixed;
 }
 
