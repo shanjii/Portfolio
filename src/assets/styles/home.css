@@ -1,5 +1,8 @@
 
+
+
 #mainBoxLight {
+    overflow-x: hidden;
     display: flex;
     transition: ease-in, 300ms;
     background-color: rgb(243, 243, 243);
@@ -9,6 +12,7 @@
 
 
 #mainBoxDark {
+    overflow-x: hidden;
     display: flex;
     transition: ease-in, 300ms;
     background-color: rgb(58, 58, 58);
