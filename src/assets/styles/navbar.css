@@ -4,6 +4,7 @@
 
 .navDark {
     z-index: 100;
+    overflow-y: hidden;
     position: fixed;
     color: rgb(230, 230, 230);
     display: flex;
@@ -14,6 +15,7 @@
 }
 
 .navLight {
+    overflow-y: hidden;
     z-index: 100;
     position: fixed;
     display: flex;
