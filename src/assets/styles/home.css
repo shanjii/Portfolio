@@ -3,15 +3,13 @@
     display: flex;
     transition: ease-in, 300ms;
     background-color: rgb(243, 243, 243);
-    overflow-y: hidden;
-    height: 100vh;
+    height: 200vh;
     color: rgb(66, 66, 66);
 }
 
 #mainBoxDark {
     overflow-x: hidden;
     display: flex;
-    overflow-y: hidden;
     transition: ease-in, 300ms;
     background-color: rgb(58, 58, 58);
     height: 100vh;
@@ -42,7 +40,7 @@
     color: rgb(231, 231, 231);
     margin-left: 10px;
     font-size: 500px;
-    position: fixed;
+    position: relative;
     top: -110px;
 }
 
@@ -51,7 +49,7 @@
     color: rgb(51, 51, 51);
     margin-left: 10px;
     font-size: 500px;
-    position: fixed;
+    position: relative;
     top: -110px;
 }
 
