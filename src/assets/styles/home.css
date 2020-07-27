@@ -1,0 +1,55 @@
+
+#mainBoxLight {
+    display: flex;
+    margin-left: 90px;
+    transition: ease-in, 300ms;
+    background-color: rgb(243, 243, 243);
+    height: 100vh;
+    color: rgb(66, 66, 66);
+}
+
+#mainBoxDark {
+    display: flex;
+    margin-left: 90px;
+    transition: ease-in, 300ms;
+    background-color: rgb(58, 58, 58);
+    height: 100vh;
+    color: rgb(230, 230, 230);
+}
+
+.presentation {
+    z-index: 2;
+    text-align: left;
+    position: relative;
+    font-family: 'Roboto';
+}
+
+.title {
+    margin-left: 150px;
+    width: 100%;
+    font-size: 8vw;
+}
+
+.subtitle {
+    margin-left: 130px;
+    width: 100%;
+    font-size: 3vw;
+}
+
+.presentationbckgrndLight {
+    transition: ease-in, 300ms;
+    z-index: 1;
+    color: rgb(231, 231, 231);
+    font-size: 500px;
+    position: fixed;
+    top: -110px;
+}
+
+.presentationbckgrndDark {
+    transition: ease-in, 300ms;
+    z-index: 1;
+    color: rgb(51, 51, 51);
+    font-size: 500px;
+    position: fixed;
+    top: -110px;
+}

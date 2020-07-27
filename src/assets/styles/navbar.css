@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+}
+
+.navDark {
+    z-index: 100;
+    position: fixed;
+    color: rgb(230, 230, 230);
+    display: flex;
+    transition: ease-in, 200ms;
+    background-color: rgb(43, 43, 43);
+    height: 100vh;
+    width: 90px;
+}
+
+.navLight {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    color: rgb(66, 66, 66);
+    transition: ease-in, 200ms;
+    background-color: lightgrey;
+    height: 100vh;
+    width: 90px;
+}
+
+.navDark:hover {
+    width: 200px;
+}
+
+.navDark:hover>.switch>p {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navLight:hover {
+    width: 200px;
+}
+
+.navLight:hover>.switch>p {
+    visibility: visible;
+    opacity: 1;
+}
+
+.switch {
+    display: flex;
+    position: fixed;
+    align-self: flex-end;
+    margin-left: 13px;
+}
+
+.switch>p {
+    transition: ease-in, 100ms;
+    margin-top: 10px;
+    font-family: 'Roboto';
+    margin-left: 10px;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.avatar {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.navLight:hover .avatarIcon {
+    margin-left: 7px;
+    width: 160px;
+}
+
+.navDark:hover .avatarIcon {
+    margin-left: 7px;
+    width: 160px;
+}
+
+.avatarIcon {
+    transition: ease-in, 200ms;
+    width: 70px;
+    border-radius: 100px;
+}
