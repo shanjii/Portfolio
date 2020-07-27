@@ -12,7 +12,7 @@ class Home extends Component {
       subtitle: '',
       title: '',
       array: ['V', 'i', 'c', 't', 'o', 'r', ' ', 'A', 'r', 'o'],
-      array2: ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', ' ', '|']
+      array2: ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.', ' ', '|']
     }
   }
 
@@ -30,7 +30,7 @@ class Home extends Component {
         clearInterval(interval)
         this.fillSubtitle()
       }
-    }, 200);
+    }, 150);
   }
 
   fillSubtitle() {
@@ -49,10 +49,10 @@ class Home extends Component {
     var i = 0
     setInterval(() => {
       if (i === 0) {
-        this.setState({ subtitle: 'Software Developer' })
+        this.setState({ subtitle: 'Software Developer.' })
         i = 1
       } else {
-        this.setState({ subtitle: 'Software Developer |' })
+        this.setState({ subtitle: 'Software Developer. |' })
         i = 0
       }
     }, 600);
@@ -78,7 +78,7 @@ class Home extends Component {
               <h2 className="subtitle">{this.state.subtitle}</h2>
             </div>
             <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
-              <p>//////////////////////</p>
+              <p>\\\\\\\\\\\\\\</p>
             </div>
           </div>
         </div>
