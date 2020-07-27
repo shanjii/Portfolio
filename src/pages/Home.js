@@ -89,11 +89,11 @@ class Home extends Component {
               <h1 className="title">{this.state.title}</h1>
               <h2 className="subtitle">{this.state.subtitle}</h2>
             </div>
-            <StyleRoot>
+            <div>
               <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
                 <p>\\\\\\\\\\\\\\</p>
               </div>
-            </StyleRoot>
+            </div>
           </div>
         </div>
       </section>
