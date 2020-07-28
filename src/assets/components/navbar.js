@@ -9,7 +9,7 @@ class Navbar extends Component {
         return (
             <section className={this.props.Theme}>
                 <div className="avatar">
-                    <img alt="icon" className="avatarIcon" src={require('../images/shanji.png')}/>
+                    <img draggable="false" alt="icon" className="avatarIcon" src={require('../images/shanji.png')}/>
                 </div>
                 <div className="switch">
                     <Switch checked={this.props.Selected === 'light' ? true : false} onChange={this.props.ChangeTheme} />

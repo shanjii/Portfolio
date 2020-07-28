@@ -1,5 +1,11 @@
 html {
     scroll-behavior: smooth;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -214,13 +220,11 @@ a {
         width: 165px;
         height: 37px;
     }
-
     .browseDark {
         margin-top: 15vh;
         width: 165px;
         height: 37px;
     }
-
     .mainContentLight {
         font-size: 20px;
     }
@@ -289,7 +293,7 @@ a {
 }
 
 @media only screen and (min-width: 2560px) {
-    .title{
+    .title {
         font-size: 250px;
     }
     .subtitle {
@@ -305,7 +309,7 @@ a {
         margin-left: 110px;
         font-size: 17px;
     }
-    .browseLight{
+    .browseLight {
         width: 460px;
         height: 120px;
     }

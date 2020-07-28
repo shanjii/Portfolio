@@ -138,7 +138,7 @@ class Home extends Component {
                 <StyleRoot>
                   <div style={styles.fadeIn}>
                     <div className={this.state.theme === 'light' ? 'browseLight' : 'browseDark'}>
-                      <a href="#secondBox">Browse projects</a>
+                      <a draggable="false" href="#secondBox">Browse projects</a>
                     </div>
                   </div>
                 </StyleRoot>
