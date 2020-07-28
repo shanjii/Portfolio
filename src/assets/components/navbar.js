@@ -12,7 +12,7 @@ class Navbar extends Component {
                     <img alt="icon" className="avatarIcon" src={require('../images/shanji.png')}/>
                 </div>
                 <div className="switch">
-                    <Switch onChange={this.props.ChangeTheme} />
+                    <Switch checked={this.props.Selected === 'light' ? true : false} onChange={this.props.ChangeTheme} />
                     <p>Theme</p>
                 </div>
             </section>

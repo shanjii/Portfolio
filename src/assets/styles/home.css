@@ -1,23 +1,70 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     overflow: hidden;
 }
 
+.header {
+    height: 360px;
+    display: flex;
+}
+
 #mainBoxLight {
     overflow-x: hidden;
-    display: flex;
+    margin-left: 90px;
     transition: ease-in, 300ms;
     background-color: rgb(243, 243, 243);
-    height: 200vh;
+    background-image: url('../images/123.png');
+    background-attachment: fixed;
+    height: 100vh;
     color: rgb(66, 66, 66);
 }
 
-#mainBoxDark {
+#secondBoxLight {
+    overflow-x: hidden;
+    display: flex;
+    margin-left: 90px;
+    transition: ease-in, 300ms;
+    background-color: rgb(243, 243, 243);
+    height: 100vh;
+    color: rgb(66, 66, 66);
+}
+
+#secondBoxDark {
     overflow-x: hidden;
     display: flex;
     transition: ease-in, 300ms;
     background-color: rgb(58, 58, 58);
     height: 100vh;
+    margin-left: 90px;
     color: rgb(230, 230, 230);
+}
+
+#mainBoxDark {
+    margin-left: 90px;
+    overflow-x: hidden;
+    transition: ease-in, 300ms;
+    background-color: rgb(58, 58, 58);
+    background-image: url('../images/axiom-pattern.png');
+    background-attachment: fixed;
+    height: 100vh;
+    color: rgb(230, 230, 230);
+}
+
+.mainContentLight {
+    margin-top: 100px;
+    font-family: 'Roboto';
+    margin-left: 120px;
+    font-size: 30px;
+}
+
+.mainContentDark {
+    margin-top: 100px;
+    font-family: 'Roboto';
+    margin-left: 120px;
+    font-size: 30px;
 }
 
 .presentation {
@@ -28,13 +75,19 @@ body {
 }
 
 .title {
-    margin-left: 220px;
+    margin-left: 120px;
     width: 100%;
     font-size: 130px;
 }
 
+#secondBox {
+    margin-left: 10px;
+    font-family: 'Roboto';
+    font-size: 30px;
+}
+
 .subtitle {
-    margin-left: 240px;
+    margin-left: 120px;
     width: 100%;
     font-size: 60px;
 }
@@ -52,6 +105,10 @@ body {
     position: fixed;
 }
 
+a {
+    text-decoration: none;
+}
+
 .presentationbckgrndDark {
     transition: ease-in, 300ms;
     color: rgb(51, 51, 51);
@@ -61,6 +118,62 @@ body {
     top: -110px;
 }
 
+.browseDark {
+    position: relative;
+    transition: ease-in, 300ms;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 20vh;
+    width: 238px;
+    height: 50px;
+    background-color: rgb(51, 51, 51);
+    margin-bottom: 50px;
+}
+
+.browseLight {
+    position: relative;
+    transition: ease-in, 300ms;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 20vh;
+    width: 238px;
+    height: 50px;
+    background-color: rgb(231, 231, 231);
+    margin-bottom: 50px;
+}
+
+.browseDark:hover {
+    color: rgb(51, 51, 51);
+    background-color: rgb(230, 230, 230);
+}
+
+.browseDark:hover>a {
+    color: rgb(51, 51, 51);
+}
+
+.browseLight:hover {
+    color: rgb(230, 230, 230);
+    background-color: rgb(51, 51, 51);
+}
+
+.browseLight:hover>a {
+    color: rgb(230, 230, 230);
+}
+
+.browseDark>a {
+    margin-left: 10px;
+    position: relative;
+    top: 6px;
+    color: rgb(230, 230, 230);
+}
+
+.browseLight>a {
+    margin-left: 10px;
+    position: relative;
+    color: rgb(51, 51, 51);
+    top: 6px;
+}
+
 @media only screen and (max-width: 1270px) {
     .title {
         font-size: 80px;
@@ -68,13 +181,16 @@ body {
     .subtitle {
         font-size: 40px;
     }
+    .header {
+        height: 250px;
+    }
     .presentationbckgrndLight {
         font-size: 350px;
         margin-left: 1px;
         margin-top: 30px;
     }
     .presentationbckgrndDark {
-        font-size: 35px;
+        font-size: 350px;
         margin-left: 1px;
         margin-top: 30px;
     }
@@ -82,25 +198,59 @@ body {
 
 @media only screen and (max-width: 800px) {
     .title {
-        margin-top: 6px;
-        font-size: 30px;
-        margin-left: 110px;
-    }
-    .subtitle {
-        font-size: 20px;
-        margin-left: 100px;
+        margin-top: 20px;
+        font-size: 10vw;
+        margin-left: 10px;
     }
     .presentationbckgrndLight {
-        font-size: 200px;
-        margin-left: 1px;
-        margin-top: 70px;
+        display: none;
     }
     .presentationbckgrndDark {
-        font-size: 200px;
-        margin-left: 1px;
-        margin-top: 70px;
+        display: none;
     }
-    .avatar {
-        margin-top: 44px;
+    .subtitle {
+        font-size: 4vw;
+        margin-left: 10px;
+    }
+    .header {
+        height: 200px;
+    }
+    .mainContentLight {
+        margin-top: 1vh;
+        margin-left: 10px;
+        font-size: 17px;
+    }
+    .mainContentDark {
+        margin-top: 1vh;
+        margin-left: 10px;
+        font-size: 17px;
+    }
+    .browseLight {
+        position: relative;
+        transition: ease-in, 300ms;
+        cursor: pointer;
+        margin-left: 2vw;
+        margin-top: 20vh;
+        width: 140px;
+        height: 40px;
+        background-color: rgb(231, 231, 231);
+        margin-bottom: 10px;
+    }
+    .browseLight>a {
+        top: 10px;
+    }
+    .browseDark {
+        position: relative;
+        transition: ease-in, 300ms;
+        cursor: pointer;
+        margin-left: 2vw;
+        margin-top: 20vh;
+        width: 140px;
+        height: 40px;
+        background-color: rgb(51, 51, 51);
+        margin-bottom: 10px;
+    }
+    .browseDark>a {
+        top: 10px;
     }
 }
