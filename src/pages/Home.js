@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Navbar from '../assets/components/navbar'
 import '../assets/styles/home.css'
+import SlideTitle from '../assets/components/slideTitle'
+import FadeText from '../assets/components/fadeText'
+import ButtonFade from '../assets/components/buttonFade'
+import Slide from '../assets/components/slide'
 import { slideInLeft, fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 
@@ -27,7 +31,8 @@ class Home extends Component {
       show1: false,
       show2: false,
       show3: false,
-      show4: false
+      show4: false,
+      slideActive: false
     }
   }
 
@@ -95,66 +100,44 @@ class Home extends Component {
     }
   }
 
+  checkTheme(value1, value2) {
+    if (localStorage.getItem('theme') === 'light') {
+      return value1
+    } else {
+      return value2
+    }
+  }
+
   render() {
     return (
       <section>
         <div>
           <div>
-            <Navbar Selected={localStorage.getItem('theme')} Theme={localStorage.getItem('theme') === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
+            <Navbar Selected={localStorage.getItem('theme')} Theme={this.checkTheme('navLight', 'navDark')} ChangeTheme={this.changeTheme} />
           </div>
-          <div id={localStorage.getItem('theme') === 'light' ? 'mainBoxLight' : 'mainBoxDark'}>
+          <div id={this.checkTheme('mainBoxLight', 'mainBoxDark')}>
             <header className="header">
               <div className="presentation">
                 <h1 className="title">{this.state.title}</h1>
                 <h2 className="subtitle">{this.state.subtitle}</h2>
               </div>
             </header>
-            <div className={localStorage.getItem('theme') === 'light' ? 'mainContentLight' : 'mainContentDark'}>
-              {this.state.show1 === true ?
-                <StyleRoot>
-                  <div style={styles.slideInLeft}>
-                    <p className="welcome">Welcome!</p>
-                    <br />
-                    <br />
-                  </div>
-                </StyleRoot>
-                : <div />
-              }
-              {this.state.show2 === true ?
-                <StyleRoot>
-                  <div style={styles.fadeIn}>
-                    <p>Please help me find out what to type in here</p>
-                  </div>
-                </StyleRoot>
-                : <div />
-              }
-              {this.state.show3 === true ?
-                <StyleRoot>
-                  <div style={styles.fadeIn}>
-                    <p>Seriously i have no fucking idea.</p>
-                  </div>
-                </StyleRoot>
-                : <div />
-              }
-              {this.state.show4 === true ?
-                <StyleRoot>
-                  <div style={styles.fadeIn}>
-                    <div className={localStorage.getItem('theme') === 'light' ? 'browseLight' : 'browseDark'}>
-                      <a draggable="false" href="#secondBox">Browse projects</a>
-                    </div>
-                  </div>
-                </StyleRoot>
-                : <div />
-              }
+            <div className={this.checkTheme('mainContentLight', 'mainContentDark')}>
+              {this.state.show1 === true ? <SlideTitle /> : <div />}
+              {this.state.show2 === true ? <FadeText>Please help me find out what to type in here</FadeText> : <div />}
+              {this.state.show3 === true ? <FadeText>Seriously i have no fucking idea</FadeText> : <div />}
+              {this.state.show4 === true ? <div onClick={() => this.setState({ slideActive: true })}><ButtonFade>Browse projects</ButtonFade></div> : <div />}
             </div>
           </div>
         </div>
         <div>
-          <div id={localStorage.getItem('theme') === 'light' ? 'secondBoxLight' : 'secondBoxDark'}>
-            <div id="secondBox">
-              Absolutely nothing.
-          </div>
-          </div>
+          <Slide Activate={this.state.slideActive}>
+            <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
+              <div id="secondBox">
+                Absolutely nothing.
+              </div>
+            </div>
+          </Slide>
         </div>
       </section>
     );

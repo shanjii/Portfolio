@@ -1,0 +1,7 @@
+.slideOn {
+    display: flex;
+}
+
+.slideOff {
+    display: none;
+}
