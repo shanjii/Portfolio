@@ -2,9 +2,6 @@ html {
     scroll-behavior: smooth;
   }
 
-body {
-    overflow: hidden;
-}
 
 .header {
     height: 360px;
