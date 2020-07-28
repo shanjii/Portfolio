@@ -37,7 +37,7 @@ class Home extends Component {
 
 
   componentDidMount = () => {
-    if (localStorage.getItem('theme') === '') {
+    if (localStorage.getItem('theme') !== 'dark') {
       localStorage.setItem('theme', 'light')
     }
     this.fillTitle()

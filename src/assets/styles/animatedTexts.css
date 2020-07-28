@@ -80,21 +80,21 @@
         margin-bottom: 10px;
     }
     .browseLight>a {
-        top: 10px;
+        top: 8px;
     }
     .browseDark {
         position: relative;
         transition: ease-in, 300ms;
         cursor: pointer;
         margin-left: 15px;
-        margin-top: 20vh;
-        width: 140px;
+        margin-top: 10vh;
+        width: 165px;
         height: 40px;
-        background-color: rgb(51, 51, 51);
+        background-color: rgb(230, 230, 230);
         margin-bottom: 10px;
     }
     .browseDark>a {
-        top: 10px;
+        top: 8px;
     }
 }
 
