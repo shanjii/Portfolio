@@ -195,6 +195,12 @@ a {
     .presentationbckgrndDark {
         display: none;
     }
+    #secondBoxLight {
+        margin-left: 0px;
+    }
+    #secondBoxDark {
+        margin-left: 0px;
+    }
     .subtitle {
         margin-left: 0px;
         font-size: 5vw;
@@ -205,16 +211,16 @@ a {
         height: 200px;
     }
     .mainContentLight {
-        margin-top: 7vh;
+        margin-top: 3vh;
         text-align: left;
         margin-left: 15px;
-        font-size: 17px;
+        font-size: 20px;
     }
     .mainContentDark {
-        margin-top: 7vh;
+        margin-top: 3vh;
         text-align: left;
         margin-left: 15px;
-        font-size: 17px;
+        font-size: 20px;
     }
 }
 
