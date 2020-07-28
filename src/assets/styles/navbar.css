@@ -56,29 +56,8 @@
     border-radius: 100px;
 }
 
-@media only screen and (min-width: 801px) {
-    .navDark:hover {
-        width: 200px;
-    }
-    .navDark:hover>.switch>p {
-        visibility: visible;
-        opacity: 1;
-    }
-    .navLight:hover {
-        width: 200px;
-    }
-    .navLight:hover>.switch>p {
-        visibility: visible;
-        opacity: 1;
-    }
-    .navLight:hover .avatarIcon {
-        margin-top: 70px;
-        margin-left: 7px;
-        width: 160px;
-    }
-    .navDark:hover .avatarIcon {
-        margin-top: 70px;
-        margin-left: 7px;
-        width: 160px;
+@media only screen and (max-width: 800px) {
+    .navLight{
+        display: none;
     }
 }

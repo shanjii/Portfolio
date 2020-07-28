@@ -6,7 +6,7 @@
     margin-top: 15vh;
     width: 238px;
     height: 50px;
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(230, 230, 230);
     margin-bottom: 10px;
 }
 
@@ -18,13 +18,13 @@
     margin-top: 15vh;
     width: 238px;
     height: 50px;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(51, 51, 51);
     margin-bottom: 10px;
 }
 
 .browseDark:hover {
     color: rgb(51, 51, 51);
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(110, 110, 110);
 }
 
 .browseDark:hover>a {
@@ -33,7 +33,7 @@
 
 .browseLight:hover {
     color: rgb(230, 230, 230);
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(131, 131, 131);
 }
 
 .browseLight:hover>a {
@@ -44,12 +44,63 @@
     margin-left: 10px;
     position: relative;
     top: 6px;
-    color: rgb(230, 230, 230);
+    color: rgb(51, 51, 51);
 }
 
 .browseLight>a {
     margin-left: 10px;
     position: relative;
-    color: rgb(51, 51, 51);
+    color: rgb(230, 230, 230);
     top: 6px;
+}
+
+@media only screen and (max-width: 1366px) {
+    .browseLight {
+        margin-top: 15vh;
+        width: 165px;
+        height: 37px;
+    }
+    .browseDark {
+        margin-top: 15vh;
+        width: 165px;
+        height: 37px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .browseLight {
+        position: relative;
+        transition: ease-in, 300ms;
+        cursor: pointer;
+        margin-left: 15px;
+        margin-top: 20vh;
+        width: 140px;
+        height: 40px;
+        background-color: rgb(51, 51, 51);
+        margin-bottom: 10px;
+    }
+    .browseLight>a {
+        top: 10px;
+    }
+    .browseDark {
+        position: relative;
+        transition: ease-in, 300ms;
+        cursor: pointer;
+        margin-left: 15px;
+        margin-top: 20vh;
+        width: 140px;
+        height: 40px;
+        background-color: rgb(51, 51, 51);
+        margin-bottom: 10px;
+    }
+    .browseDark>a {
+        top: 10px;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .browseLight {
+        width: 460px;
+        height: 120px;
+    }
 }

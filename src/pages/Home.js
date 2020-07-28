@@ -4,7 +4,6 @@ import '../assets/styles/home.css'
 import SlideTitle from '../assets/components/slideTitle'
 import FadeText from '../assets/components/fadeText'
 import ButtonFade from '../assets/components/buttonFade'
-import Slide from '../assets/components/slide'
 import { slideInLeft, fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 
@@ -131,13 +130,11 @@ class Home extends Component {
           </div>
         </div>
         <div>
-          <Slide Activate={this.state.slideActive}>
-            <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
-              <div id="secondBox">
-                Absolutely nothing.
-              </div>
+          <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
+            <div id="secondBox">
+              Absolutely nothing.
             </div>
-          </Slide>
+          </div>
         </div>
       </section>
     );
