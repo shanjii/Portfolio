@@ -106,11 +106,6 @@ class Home extends Component {
                 <h1 className="title">{this.state.title}</h1>
                 <h2 className="subtitle">{this.state.subtitle}</h2>
               </div>
-              <div>
-                <div className={this.state.theme === 'light' ? 'presentationbckgrndLight' : 'presentationbckgrndDark'}>
-                  <p>\\\\\\\\\\\\\\\\\\\\\\\</p>
-                </div>
-              </div>
             </header>
             <div className={this.state.theme === 'light' ? 'mainContentLight' : 'mainContentDark'}>
               {this.state.show1 === true ?
@@ -155,7 +150,7 @@ class Home extends Component {
         <div>
           <div id={this.state.theme === 'light' ? 'secondBoxLight' : 'secondBoxDark'}>
             <div id="secondBox">
-              Congrats you are stuck here now.
+              Absolutely nothing.
           </div>
           </div>
         </div>

@@ -24,7 +24,7 @@ html {
     display: flex;
     margin-left: 90px;
     transition: ease-in, 300ms;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(230, 230, 230);
     height: 100vh;
     color: rgb(66, 66, 66);
 }
