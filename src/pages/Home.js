@@ -20,7 +20,6 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      theme: 'light',
       subtitle: '',
       title: '',
       array: ['<', 'V', 'i', 'c', 't', 'o', 'r', '_', 'A', 'r', 'o', '/', '>'],
@@ -34,6 +33,9 @@ class Home extends Component {
 
 
   componentDidMount = () => {
+    if (localStorage.getItem('theme') === '') {
+      localStorage.setItem('theme', 'light')
+    }
     this.fillTitle()
   }
 
@@ -85,11 +87,11 @@ class Home extends Component {
   }
 
   changeTheme = () => {
-    if (this.state.theme === 'light') {
-      this.setState({ theme: 'dark' })
+    if (localStorage.getItem('theme') === 'light') {
+      localStorage.setItem('theme', 'dark')
     }
     else {
-      this.setState({ theme: 'light' })
+      localStorage.setItem('theme', 'light')
     }
   }
 
@@ -98,16 +100,16 @@ class Home extends Component {
       <section>
         <div>
           <div>
-            <Navbar Selected={this.state.theme} Theme={this.state.theme === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
+            <Navbar Selected={localStorage.getItem('theme')} Theme={localStorage.getItem('theme') === 'light' ? 'navLight' : 'navDark'} ChangeTheme={this.changeTheme} />
           </div>
-          <div id={this.state.theme === 'light' ? 'mainBoxLight' : 'mainBoxDark'}>
+          <div id={localStorage.getItem('theme') === 'light' ? 'mainBoxLight' : 'mainBoxDark'}>
             <header className="header">
               <div className="presentation">
                 <h1 className="title">{this.state.title}</h1>
                 <h2 className="subtitle">{this.state.subtitle}</h2>
               </div>
             </header>
-            <div className={this.state.theme === 'light' ? 'mainContentLight' : 'mainContentDark'}>
+            <div className={localStorage.getItem('theme') === 'light' ? 'mainContentLight' : 'mainContentDark'}>
               {this.state.show1 === true ?
                 <StyleRoot>
                   <div style={styles.slideInLeft}>
@@ -137,7 +139,7 @@ class Home extends Component {
               {this.state.show4 === true ?
                 <StyleRoot>
                   <div style={styles.fadeIn}>
-                    <div className={this.state.theme === 'light' ? 'browseLight' : 'browseDark'}>
+                    <div className={localStorage.getItem('theme') === 'light' ? 'browseLight' : 'browseDark'}>
                       <a draggable="false" href="#secondBox">Browse projects</a>
                     </div>
                   </div>
@@ -148,7 +150,7 @@ class Home extends Component {
           </div>
         </div>
         <div>
-          <div id={this.state.theme === 'light' ? 'secondBoxLight' : 'secondBoxDark'}>
+          <div id={localStorage.getItem('theme') === 'light' ? 'secondBoxLight' : 'secondBoxDark'}>
             <div id="secondBox">
               Absolutely nothing.
           </div>
