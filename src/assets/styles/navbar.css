@@ -90,4 +90,7 @@
     .navLight {
         display: none;
     }
+    .navDark {
+        display: none;
+    }
 }
