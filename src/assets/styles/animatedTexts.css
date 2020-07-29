@@ -23,8 +23,7 @@
 }
 
 .browseDark:hover {
-    color: rgb(51, 51, 51);
-    background-color: rgb(110, 110, 110);
+    background-color: rgb(51, 51, 51);
 }
 
 .browseDark:hover>a {
@@ -32,8 +31,7 @@
 }
 
 .browseLight:hover {
-    color: rgb(230, 230, 230);
-    background-color: rgb(131, 131, 131);
+    background-color: rgb(230, 230, 230);
 }
 
 .browseLight:hover>a {
