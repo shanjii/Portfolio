@@ -3,6 +3,7 @@ import Navbar from '../assets/components/navbar'
 import '../assets/styles/home.css'
 import SlideTitle from '../assets/components/slideTitle'
 import FadeText from '../assets/components/fadeText'
+import Writer from '../assets/components/writer'
 import ButtonFade from '../assets/components/buttonFade'
 import { slideInLeft, fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
@@ -25,8 +26,8 @@ class Home extends Component {
     this.state = {
       subtitle: '',
       title: '',
-      array: ['<', 'V', 'i', 'c', 't', 'o', 'r', '_', 'A', 'r', 'o', '/', '>'],
-      array2: ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.', ' ', '|'],
+      array: '<Victor_Aro/>'.split(''),
+      array2: 'Software Developer. |'.split(''),
       show1: false,
       show2: false,
       show3: false,
@@ -122,9 +123,11 @@ class Home extends Component {
               </div>
             </header>
             <div className={this.checkTheme('mainContentLight', 'mainContentDark')}>
-              {this.state.show1 === true ? <SlideTitle /> : <div />}
-              {this.state.show2 === true ? <FadeText>Please help me find out what to type in here</FadeText> : <div />}
-              {this.state.show3 === true ? <FadeText>Seriously i have no fucking idea</FadeText> : <div />}
+              {this.state.show1 === true ? <Writer Timer={40}>Welcome!</Writer> : <div />}
+              <br />
+              <br />
+              {this.state.show2 === true ? <Writer Timer={10}>Please help me find out what to type in here.</Writer> : <div />}
+              {this.state.show3 === true ? <Writer Timer={10}>Seriously i have no fucking idea.</Writer> : <div />}
               {this.state.show4 === true ? <div onClick={() => this.setState({ slideActive: true })}><ButtonFade>Browse projects</ButtonFade></div> : <div />}
             </div>
           </div>
@@ -132,7 +135,9 @@ class Home extends Component {
         <div>
           <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
             <div id="secondBox">
-              Absolutely nothing.
+              <Writer>
+                asdasdasd
+              </Writer>
             </div>
           </div>
         </div>
