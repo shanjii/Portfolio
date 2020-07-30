@@ -63,7 +63,6 @@ class Home extends Component {
       i++
       if (i === this.state.array2.length) {
         clearInterval(interval)
-        this.setState({ show1: true })
         this.titleLoop()
       }
     }, 50);
@@ -72,14 +71,19 @@ class Home extends Component {
   titleLoop() {
     var i = 0
     setTimeout(() => {
+      this.setState({ show1: true })
+
+
+    }, 500);
+    setTimeout(() => {
       this.setState({ show2: true })
     }, 1500);
     setTimeout(() => {
       this.setState({ show3: true })
-    }, 2700);
+    }, 4000);
     setTimeout(() => {
       this.setState({ show4: true })
-    }, 4000);
+    }, 5800);
     setInterval(() => {
       if (i === 0) {
         this.setState({ subtitle: 'Software Developer.' })
@@ -123,11 +127,11 @@ class Home extends Component {
               </div>
             </header>
             <div className={this.checkTheme('mainContentLight', 'mainContentDark')}>
-              {this.state.show1 === true ? <Writer Timer={40}>Welcome!</Writer> : <div />}
+              {this.state.show1 === true ? <Writer Timer={30}>Hello!</Writer> : <div />}
               <br />
               <br />
-              {this.state.show2 === true ? <Writer Timer={10}>Please help me find out what to type in here.</Writer> : <div />}
-              {this.state.show3 === true ? <Writer Timer={10}>Seriously i have no fucking idea.</Writer> : <div />}
+              {this.state.show2 === true ? <Writer Timer={30}>My name is Victor Aro and i am a Computer Engineering student.</Writer> : <div />}
+              {this.state.show3 === true ? <Writer Timer={30}>Here you will find some of my personal projects...</Writer> : <div />}
               {this.state.show4 === true ? <div onClick={() => this.setState({ slideActive: true })}><ButtonFade>Browse projects</ButtonFade></div> : <div />}
             </div>
           </div>
