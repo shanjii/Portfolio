@@ -7,6 +7,7 @@ import Writer from '../assets/components/writer'
 import ButtonFade from '../assets/components/buttonFade'
 import { slideInLeft, fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
+import MobileNav from '../assets/components/mobileNav'
 
 const styles = {
   slideInLeft: {
@@ -32,7 +33,8 @@ class Home extends Component {
       show2: false,
       show3: false,
       show4: false,
-      slideActive: false
+      slideActive: false,
+      play: false
     }
   }
 
@@ -112,6 +114,10 @@ class Home extends Component {
     }
   }
 
+  handleClick = () => {
+    this.refs.chag.play()
+  }
+
   render() {
     return (
       <section>
@@ -119,6 +125,7 @@ class Home extends Component {
           <div>
             <Navbar Selected={localStorage.getItem('theme')} IconTheme={this.checkTheme('iconLight', 'iconDark')} Theme={this.checkTheme('navLight', 'navDark')} ChangeTheme={this.changeTheme} />
           </div>
+          <MobileNav Selected={localStorage.getItem('theme')} ChangeTheme={this.changeTheme} Theme={this.checkTheme('mobileNavLight', 'mobileNavDark')} />
           <div id="Home">
             <div id={this.checkTheme('mainBoxLight', 'mainBoxDark')}>
               <header className="header">
@@ -133,7 +140,7 @@ class Home extends Component {
                 <br />
                 {this.state.show2 === true ? <Writer Timer={20}>My name is Victor Aro and i am a Computer Engineering student.</Writer> : <div />}
                 {this.state.show3 === true ? <Writer Timer={20}>Here you will find some of my personal projects...</Writer> : <div />}
-                {this.state.show4 === true ? <div onClick={() => this.setState({ slideActive: true })}><ButtonFade>Browse projects</ButtonFade></div> : <div />}
+                {this.state.show4 === true ? <div onClick={() => this.handleClick()}><ButtonFade>Browse projects</ButtonFade></div> : <div />}
               </div>
             </div>
           </div>
@@ -142,9 +149,7 @@ class Home extends Component {
           <div id="Projects">
             <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
               <div id="secondBox">
-                <Writer>
-                  Hello Roberto
-              </Writer>
+                <video className="video" ref="chag" src={require('../assets/images/chaggers.mp4')} />
               </div>
             </div>
           </div>

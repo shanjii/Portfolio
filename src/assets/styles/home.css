@@ -70,6 +70,12 @@ body {
     color: rgb(230, 230, 230);
 }
 
+.video {
+    margin-top: 0px;
+    margin-left: 20vw;
+    width: 50vw;
+}
+
 #mainBoxDark {
     margin-left: 90px;
     overflow-x: hidden;

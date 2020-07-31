@@ -28,7 +28,6 @@ ul {
 .iconLight {
     display: flex;
     cursor: pointer;
-    transition: ease-in, 300ms;
     padding-top: 5px;
     padding-bottom: 5px;
     width: 300px;
@@ -60,7 +59,6 @@ ul {
 .iconDark {
     display: flex;
     cursor: pointer;
-    transition: ease-in, 300ms;
     padding-top: 5px;
     padding-bottom: 5px;
     width: 300px;
@@ -144,7 +142,6 @@ ul {
 }
 
 .switch>p {
-    transition: ease-in, 300ms;
     margin-top: 10px;
     font-family: 'Roboto';
     margin-left: 10px;
@@ -160,26 +157,12 @@ ul {
     margin-top: 10px;
 }
 
-.avatar:hover>img{
+.avatar:hover>img {
     opacity: 0.5;
 }
 
-a{
+a {
     color: inherit;
-}
-
-.avatar:hover>p{
-    opacity: 1;
-}
-
-.openGithub{
-    transition: ease-in, 150ms;
-    opacity: 0;    
-    position: fixed;
-    margin-left: 19px;
-    margin-top: -101px;
-    font-family: 'Roboto';
-    font-size: 25px;
 }
 
 .avatarIcon {
