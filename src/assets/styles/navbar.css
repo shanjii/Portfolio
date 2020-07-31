@@ -5,13 +5,92 @@
 .navDark {
     z-index: 100;
     overflow-y: hidden;
+    overflow-x: hidden;
     position: fixed;
     color: rgb(230, 230, 230);
     display: flex;
-    transition: ease-in, 200ms;
+    transition: ease-in, 300ms;
     background-color: rgb(43, 43, 43);
     height: 100vh;
     width: 90px;
+}
+
+.iconList {
+    list-style: none;
+    margin-top: 300px;
+    margin-left: -20px;
+}
+
+ul {
+    padding: 0;
+}
+
+.iconLight {
+    display: flex;
+    cursor: pointer;
+    transition: ease-in, 300ms;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+}
+
+.iconLight:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+.iconLight:hover>p {
+    color: rgb(230, 230, 230);
+}
+
+.iconLight:hover>img {
+    filter: invert(100);
+}
+
+.iconLight>img {
+    margin-left: 38px;
+}
+
+.iconLight>p {
+    font-family: 'Roboto';
+    font-size: 20px;
+    margin-top: 14px;
+    margin-left: 22px;
+}
+
+.iconDark {
+    display: flex;
+    cursor: pointer;
+    transition: ease-in, 300ms;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+}
+
+.iconDark>img {
+    filter: invert(100);
+}
+
+.iconDark:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.iconDark:hover>p {
+    color: rgb(51, 51, 51);
+}
+
+.iconDark:hover>img {
+    filter: invert(0);
+}
+
+.iconDark>img {
+    margin-left: 38px;
+}
+
+.iconDark>p {
+    font-family: 'Roboto';
+    font-size: 20px;
+    margin-top: 14px;
+    margin-left: 22px;
 }
 
 .navDark:hover {
@@ -46,11 +125,12 @@
 
 .navLight {
     overflow-y: hidden;
+    overflow-x: hidden;
     z-index: 100;
     position: fixed;
     display: flex;
     color: rgb(66, 66, 66);
-    transition: ease-in, 200ms;
+    transition: ease-in, 300ms;
     background-color: rgb(226, 226, 226);
     height: 100vh;
     width: 90px;
@@ -64,7 +144,7 @@
 }
 
 .switch>p {
-    transition: ease-in, 100ms;
+    transition: ease-in, 300ms;
     margin-top: 10px;
     font-family: 'Roboto';
     margin-left: 10px;
@@ -75,12 +155,35 @@
 
 .avatar {
     position: fixed;
+    cursor: pointer;
     margin-left: 7px;
     margin-top: 10px;
 }
 
+.avatar:hover>img{
+    opacity: 0.5;
+}
+
+a{
+    color: inherit;
+}
+
+.avatar:hover>p{
+    opacity: 1;
+}
+
+.openGithub{
+    transition: ease-in, 150ms;
+    opacity: 0;    
+    position: fixed;
+    margin-left: 19px;
+    margin-top: -101px;
+    font-family: 'Roboto';
+    font-size: 25px;
+}
+
 .avatarIcon {
-    transition: ease-in, 200ms;
+    transition: ease-in, 300ms;
     width: 70px;
     border-style: solid;
     border-radius: 100px;

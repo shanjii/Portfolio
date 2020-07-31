@@ -8,9 +8,22 @@ class Navbar extends Component {
     render() {
         return (
             <section className={this.props.Theme}>
-                <div className="avatar">
-                    <img draggable="false" alt="icon" className="avatarIcon" src={require('../images/shanji.png')}/>
-                </div>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/shanjii">
+                    <div className="avatar">
+                        <img draggable="false" alt="icon" className="avatarIcon" src={require('../images/shanji.png')} />
+                        <p className="openGithub">Open GitHub</p>
+                    </div>
+                </a>
+                <ul className="iconList">
+                    <a href="#Home">
+                        <li className={this.props.IconTheme}><img draggable="false" width={50} src={require('../images/home.png')} /><p>Home</p></li>
+                    </a>
+                    <br />
+                    <a href="#Projects">
+                        <li className={this.props.IconTheme}><img draggable="false" width={50} src={require('../images/code.png')} /><p>Projects</p></li>
+                    </a>
+
+                </ul>
                 <div className="switch">
                     <Switch checked={this.props.Selected === 'light' ? true : false} onChange={this.props.ChangeTheme} />
                     <p>Theme</p>

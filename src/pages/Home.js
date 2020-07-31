@@ -80,10 +80,10 @@ class Home extends Component {
     }, 1500);
     setTimeout(() => {
       this.setState({ show3: true })
-    }, 4000);
+    }, 3500);
     setTimeout(() => {
       this.setState({ show4: true })
-    }, 5800);
+    }, 5000);
     setInterval(() => {
       if (i === 0) {
         this.setState({ subtitle: 'Software Developer.' })
@@ -117,31 +117,35 @@ class Home extends Component {
       <section>
         <div>
           <div>
-            <Navbar Selected={localStorage.getItem('theme')} Theme={this.checkTheme('navLight', 'navDark')} ChangeTheme={this.changeTheme} />
+            <Navbar Selected={localStorage.getItem('theme')} IconTheme={this.checkTheme('iconLight', 'iconDark')} Theme={this.checkTheme('navLight', 'navDark')} ChangeTheme={this.changeTheme} />
           </div>
-          <div id={this.checkTheme('mainBoxLight', 'mainBoxDark')}>
-            <header className="header">
-              <div className="presentation">
-                <h1 className="title">{this.state.title}</h1>
-                <h2 className="subtitle">{this.state.subtitle}</h2>
+          <div id="Home">
+            <div id={this.checkTheme('mainBoxLight', 'mainBoxDark')}>
+              <header className="header">
+                <div className="presentation">
+                  <h1 className="title">{this.state.title}</h1>
+                  <h2 className="subtitle">{this.state.subtitle}</h2>
+                </div>
+              </header>
+              <div className={this.checkTheme('mainContentLight', 'mainContentDark')}>
+                {this.state.show1 === true ? <Writer Timer={10}>Hello!</Writer> : <div />}
+                <br />
+                <br />
+                {this.state.show2 === true ? <Writer Timer={20}>My name is Victor Aro and i am a Computer Engineering student.</Writer> : <div />}
+                {this.state.show3 === true ? <Writer Timer={20}>Here you will find some of my personal projects...</Writer> : <div />}
+                {this.state.show4 === true ? <div onClick={() => this.setState({ slideActive: true })}><ButtonFade>Browse projects</ButtonFade></div> : <div />}
               </div>
-            </header>
-            <div className={this.checkTheme('mainContentLight', 'mainContentDark')}>
-              {this.state.show1 === true ? <Writer Timer={30}>Hello!</Writer> : <div />}
-              <br />
-              <br />
-              {this.state.show2 === true ? <Writer Timer={30}>My name is Victor Aro and i am a Computer Engineering student.</Writer> : <div />}
-              {this.state.show3 === true ? <Writer Timer={30}>Here you will find some of my personal projects...</Writer> : <div />}
-              {this.state.show4 === true ? <div onClick={() => this.setState({ slideActive: true })}><ButtonFade>Browse projects</ButtonFade></div> : <div />}
             </div>
           </div>
         </div>
         <div>
-          <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
-            <div id="secondBox">
-              <Writer>
-                asdasdasd
+          <div id="Projects">
+            <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
+              <div id="secondBox">
+                <Writer>
+                  Hello Roberto
               </Writer>
+              </div>
             </div>
           </div>
         </div>
