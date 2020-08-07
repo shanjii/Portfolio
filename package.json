@@ -11,6 +11,7 @@
     "animate.css": "^4.1.0",
     "compass": "^0.1.1",
     "compass-mixins": "^0.12.10",
+    "discord.js": "^12.2.0",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "nodemailer": "^6.4.8",
