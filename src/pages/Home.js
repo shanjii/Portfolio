@@ -8,9 +8,6 @@ import ButtonFade from '../assets/components/buttonFade'
 import { slideInLeft, fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 import MobileNav from '../assets/components/mobileNav'
-import { startDiscordBot } from './bot'
-startDiscordBot()
-
 
 const styles = {
   slideInLeft: {
