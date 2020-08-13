@@ -10,7 +10,6 @@ html {
 
 body {
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -53,7 +52,6 @@ body {
     margin-left: 90px;
     width: 100vw;
     transition: ease-in, 300ms;
-    background-color: rgb(230, 230, 230);
     height: 100vh;
     color: rgb(66, 66, 66);
 }
@@ -64,7 +62,6 @@ body {
     margin-top: -100vh;
     width: 100vw;
     transition: ease-in, 300ms;
-    background-color: rgb(58, 58, 58);
     height: 100vh;
     margin-left: 90px;
     color: rgb(230, 230, 230);

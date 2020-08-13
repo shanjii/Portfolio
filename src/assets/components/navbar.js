@@ -18,7 +18,7 @@ class Navbar extends Component {
                         <li className={this.props.IconTheme}><img draggable="false" width={50} src={require('../images/home.png')} /><p>Home</p></li>
                     </a>
                     <br />
-                    <a href="#Content">
+                    <a href="#secondBox">
                         <li className={this.props.IconTheme}><img draggable="false" width={50} src={require('../images/code.png')} /><p>Projects</p></li>
                     </a>
                 </ul>

@@ -16,11 +16,9 @@ class ButtonFade extends Component {
         return (
             <StyleRoot>
                 <div style={styles.fadeIn}>
-                    <a href="#secondBox">
-                        <div className={localStorage.getItem('theme') === 'light' ? 'browseLight' : 'browseDark'}>
-                            <a draggable="false">{this.props.children}</a>
-                        </div>
-                    </a>
+                    <div className={localStorage.getItem('theme') === 'light' ? 'browseLight' : 'browseDark'}>
+                        <a className="buttonPadding" href="#secondBox" draggable="false">{this.props.children}</a>
+                    </div>
                 </div>
             </StyleRoot>
         );

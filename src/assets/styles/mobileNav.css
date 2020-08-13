@@ -4,14 +4,13 @@
     top: 100vh;
     height: 60px;
     margin-top: -60px;
+    z-index: 100;
     background-color: rgb(36, 36, 36);
     width: 100%;
 }
 
 .mobileNavLight>ul {
     width: 100%;
-    position: relative;
-    left: -28px;
     list-style: none;
     margin-left: 20%;
     margin-right: 20%;
@@ -23,6 +22,7 @@
 .mobileNavDark {
     display: none;
     position: fixed;
+    z-index: 100;
     top: 100vh;
     height: 60px;
     margin-top: -60px;
@@ -34,17 +34,10 @@
     filter: invert(100);
 }
 
-.mobileSwitch {
-    top: 12px;
-    left: 20px;
-}
-
 .mobileNavDark>ul {
     width: 100%;
     list-style: none;
     margin-left: 20%;
-    position: relative;
-    left: -28px;
     margin-right: 20%;
     justify-content: space-between;
     margin-top: 8px;

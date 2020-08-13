@@ -9,6 +9,7 @@ import { slideInLeft, fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 import MobileNav from '../assets/components/mobileNav'
 
+
 const styles = {
   slideInLeft: {
     animation: 'x 1s',
@@ -74,18 +75,16 @@ class Home extends Component {
     var i = 0
     setTimeout(() => {
       this.setState({ show1: true })
-
-
     }, 500);
     setTimeout(() => {
       this.setState({ show2: true })
     }, 1500);
     setTimeout(() => {
       this.setState({ show3: true })
-    }, 3500);
+    }, 3000);
     setTimeout(() => {
       this.setState({ show4: true })
-    }, 5000);
+    }, 4000);
     setInterval(() => {
       if (i === 0) {
         this.setState({ subtitle: 'Software Developer.' })
@@ -115,7 +114,6 @@ class Home extends Component {
   }
 
   handleClick = () => {
-    this.refs.chag.play()
   }
 
   render() {
@@ -149,7 +147,6 @@ class Home extends Component {
           <div id="Projects">
             <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
               <div id="secondBox">
-                <video className="video" ref="chag" src={require('../assets/images/chaggers.mp4')} />
               </div>
             </div>
           </div>
