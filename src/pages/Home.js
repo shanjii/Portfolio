@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import Navbar from '../assets/components/navbar'
 import '../assets/styles/home.css'
-import SlideTitle from '../assets/components/slideTitle'
+import '../assets/styles/projects.css'
 import FadeText from '../assets/components/fadeText'
 import Writer from '../assets/components/writer'
 import ButtonFade from '../assets/components/buttonFade'
 import { slideInLeft, fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 import MobileNav from '../assets/components/mobileNav'
+import { ScrollHandler } from './ScrollHandler'
+var isScrollReady = false
 
+window.onscroll = () => {
+  isScrollReady = ScrollHandler()
+}
 
 const styles = {
   slideInLeft: {
@@ -29,7 +34,7 @@ class Home extends Component {
       subtitle: '',
       title: '',
       array: '<Victor_Aro/>'.split(''),
-      array2: 'Software Developer. |'.split(''),
+      array2: 'Fullstack Developer. |'.split(''),
       show1: false,
       show2: false,
       show3: false,
@@ -76,21 +81,12 @@ class Home extends Component {
     setTimeout(() => {
       this.setState({ show1: true })
     }, 500);
-    setTimeout(() => {
-      this.setState({ show2: true })
-    }, 1500);
-    setTimeout(() => {
-      this.setState({ show3: true })
-    }, 3000);
-    setTimeout(() => {
-      this.setState({ show4: true })
-    }, 4000);
     setInterval(() => {
       if (i === 0) {
-        this.setState({ subtitle: 'Software Developer.' })
+        this.setState({ subtitle: 'Fullstack Developer.' })
         i = 1
       } else {
-        this.setState({ subtitle: 'Software Developer. |' })
+        this.setState({ subtitle: 'Fullstack Developer. |' })
         i = 0
       }
     }, 600);
@@ -113,12 +109,9 @@ class Home extends Component {
     }
   }
 
-  handleClick = () => {
-  }
-
   render() {
     return (
-      <section>
+      <section id={this.checkTheme('backgroundLight', 'backgroundDark')}>
         <div>
           <div>
             <Navbar Selected={localStorage.getItem('theme')} IconTheme={this.checkTheme('iconLight', 'iconDark')} Theme={this.checkTheme('navLight', 'navDark')} ChangeTheme={this.changeTheme} />
@@ -133,25 +126,134 @@ class Home extends Component {
                 </div>
               </header>
               <div className={this.checkTheme('mainContentLight', 'mainContentDark')}>
-                {this.state.show1 === true ? <Writer Timer={10}>Hello!</Writer> : <div />}
+                {this.state.show1 === true ? <FadeText>Hello!</FadeText> : <div />}
                 <br />
                 <br />
-                {this.state.show2 === true ? <Writer Timer={20}>My name is Victor Aro and i am a Computer Engineering student.</Writer> : <div />}
-                {this.state.show3 === true ? <Writer Timer={20}>Here you will find some of my personal projects...</Writer> : <div />}
-                {this.state.show4 === true ? <div onClick={() => this.handleClick()}><ButtonFade>Browse projects</ButtonFade></div> : <div />}
+                {this.state.show1 === true ? <FadeText>My name is Victor Aro and i am a Computer Engineering student.</FadeText> : <div />}
+                {this.state.show1 === true ? <FadeText>Here you will find some of my personal projects...</FadeText> : <div />}
+                {this.state.show1 === true ? <div><ButtonFade>Browse projects</ButtonFade></div> : <div />}
               </div>
             </div>
           </div>
         </div>
-        <div>
-          <div id="Projects">
-            <div id={this.checkTheme('secondBoxLight', 'secondBoxDark')}>
-              <div id="secondBox">
+        <div id='Projects'>
+          <br />
+          <div >
+            {isScrollReady ?
+              <div id={this.checkTheme('boxSlideActiveLight', 'boxSlideActiveDark')}>
+                <div className={this.checkTheme("viewOnGithubLight", "viewOnGithubDark")}>
+                <img className={this.checkTheme("githubLogoLight", "githubLogoDark")} src={require('../assets/images/github.png')} />
+                </div>
+                <div className="project">
+                  <div className="projectText">
+                    <h1 className="projectTitle">Dynamic Space</h1>
+                    <br />
+                    <p>Electron application for automating Azure Resource Manager workspaces.</p>
+                    <br />
+                    <p>This application integrates both Electron and React frameworks in an effort to develop a plug n' play solution to Cloud service deployments in Azure.</p>
+                  </div>
+                  <div>
+                    <img className="projectImage" src={require('../assets/images/dynamic.png')} />
+                  </div>
+                </div>
               </div>
-            </div>
+              :
+              <div id={this.checkTheme('boxSlideLight', 'boxSlideDark')}>
+                <div className={this.checkTheme("viewOnGithubLight", "viewOnGithubDark")}>
+                <img className={this.checkTheme("githubLogoLight", "githubLogoDark")} src={require('../assets/images/github.png')} />
+                </div>
+                <div className="project">
+                  <div className="projectText">
+                    <h1 className="projectTitle">Dynamic Space</h1>
+                    <br />
+                    <p>Electron application for automating Azure Resource Manager workspaces.</p>
+                    <br />
+                    <p>This application integrates both Electron and React frameworks in an effort to develop a plug n' play solution to Cloud service deployments in Azure.</p>
+                  </div>
+                  <div>
+                    <img width={430} src={require('../assets/images/dynamic.png')} />
+                  </div>
+                </div>
+              </div>}
           </div>
-        </div>
-      </section>
+          <div >
+            {isScrollReady ?
+              <div id={this.checkTheme('boxSlideActiveLight', 'boxSlideActiveDark')}>
+                <div className={this.checkTheme("viewOnGithubLight", "viewOnGithubDark")}>
+                <img className={this.checkTheme("githubLogoLight", "githubLogoDark")} src={require('../assets/images/github.png')} />
+                </div>
+                <div className="project">
+                  <div className="projectText">
+                    <h1 className="projectTitle">Dynamic Space</h1>
+                    <br />
+                    <p>Electron application for automating Azure Resource Manager workspaces.</p>
+                    <br />
+                    <p>This application integrates both Electron and React frameworks in an effort to develop a plug n' play solution to Cloud service deployments in Azure.</p>
+                  </div>
+                  <div>
+                    <img className="projectImage" src={require('../assets/images/dynamic.png')} />
+                  </div>
+                </div>
+              </div>
+              :
+              <div id={this.checkTheme('boxSlideLight', 'boxSlideDark')}>
+                <div className={this.checkTheme("viewOnGithubLight", "viewOnGithubDark")}>
+                <img className={this.checkTheme("githubLogoLight", "githubLogoDark")} src={require('../assets/images/github.png')} />
+                </div>
+                <div className="project">
+                  <div className="projectText">
+                    <h1 className="projectTitle">Dynamic Space</h1>
+                    <br />
+                    <p>Electron application for automating Azure Resource Manager workspaces.</p>
+                    <br />
+                    <p>This application integrates both Electron and React frameworks in an effort to develop a plug n' play solution to Cloud service deployments in Azure.</p>
+                  </div>
+                  <div>
+                    <img width={430} src={require('../assets/images/dynamic.png')} />
+                  </div>
+                </div>
+              </div>}
+          </div>
+          <div >
+            {isScrollReady ?
+              <div id={this.checkTheme('boxSlideActiveLight', 'boxSlideActiveDark')}>
+                <div className={this.checkTheme("viewOnGithubLight", "viewOnGithubDark")}>
+                <img className={this.checkTheme("githubLogoLight", "githubLogoDark")} src={require('../assets/images/github.png')} />
+                </div>
+                <div className="project">
+                  <div className="projectText">
+                    <h1 className="projectTitle">Dynamic Space</h1>
+                    <br />
+                    <p>Electron application for automating Azure Resource Manager workspaces.</p>
+                    <br />
+                    <p>This application integrates both Electron and React frameworks in an effort to develop a plug n' play solution to Cloud service deployments in Azure.</p>
+                  </div>
+                  <div>
+                    <img className="projectImage" src={require('../assets/images/dynamic.png')} />
+                  </div>
+                </div>
+              </div>
+              :
+              <div id={this.checkTheme('boxSlideLight', 'boxSlideDark')}>
+                <div className={this.checkTheme("viewOnGithubLight", "viewOnGithubDark")}>
+                  <img className={this.checkTheme("githubLogoLight", "githubLogoDark")} src={require('../assets/images/github.png')} />
+                </div>
+                <div className="project">
+                  <div className="projectText">
+                    <h1 className="projectTitle">Dynamic Space</h1>
+                    <br />
+                    <p>Electron application for automating Azure Resource Manager workspaces.</p>
+                    <br />
+                    <p>This application integrates both Electron and React frameworks in an effort to develop a plug n' play solution to Cloud service deployments in Azure.</p>
+                  </div>
+                  <div>
+                    <img width={430} src={require('../assets/images/dynamic.png')} />
+                  </div>
+                </div>
+              </div>}
+          </div>
+        </div >
+      </section >
     );
   }
 }

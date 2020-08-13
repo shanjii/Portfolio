@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Radium, { StyleRoot } from 'radium';
 import '../styles/animatedTexts.css'
-import { slideInLeft, fadeIn } from 'react-animations';
+import { slideInLeft } from 'react-animations';
 
 const styles = {
     slideInLeft: {

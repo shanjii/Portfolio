@@ -34,53 +34,36 @@ body {
     display: flex;
 }
 
+#Home {
+    display: flex;
+    height: 800px;
+}
+
+#backgroundLight {
+    background-color: rgb(243, 243, 243);
+    background-image: url('../images/axiom-pattern.png');
+    background-attachment: fixed;
+    transition: ease-in, 300ms;
+}
+
+#backgroundDark {
+    background-color: rgb(58, 58, 58);
+    background-image: url('../images/axiom-pattern.png');
+    background-attachment: fixed;
+    transition: ease-in, 300ms;
+}
+
 #mainBoxLight {
     overflow-x: hidden;
     margin-left: 90px;
     transition: ease-in, 300ms;
-    background-color: rgb(243, 243, 243);
-    background-image: url('../images/axiom-pattern.png');
-    background-attachment: fixed;
-    height: 200vh;
     color: rgb(66, 66, 66);
-}
-
-#secondBoxLight {
-    overflow-x: hidden;
-    display: flex;
-    margin-top: -100vh;
-    margin-left: 90px;
-    width: 100vw;
-    transition: ease-in, 300ms;
-    height: 100vh;
-    color: rgb(66, 66, 66);
-}
-
-#secondBoxDark {
-    overflow-x: hidden;
-    display: flex;
-    margin-top: -100vh;
-    width: 100vw;
-    transition: ease-in, 300ms;
-    height: 100vh;
-    margin-left: 90px;
-    color: rgb(230, 230, 230);
-}
-
-.video {
-    margin-top: 0px;
-    margin-left: 20vw;
-    width: 50vw;
 }
 
 #mainBoxDark {
     margin-left: 90px;
     overflow-x: hidden;
     transition: ease-in, 300ms;
-    background-color: rgb(58, 58, 58);
-    background-image: url('../images/axiom-pattern.png');
-    background-attachment: fixed;
-    height: 200vh;
     color: rgb(230, 230, 230);
 }
 
@@ -111,12 +94,6 @@ body {
     margin-left: 120px;
     width: 100%;
     font-size: 130px;
-}
-
-#secondBox {
-    margin-left: 10px;
-    font-family: 'Roboto';
-    font-size: 30px;
 }
 
 .subtitle {
@@ -161,6 +138,9 @@ a {
     .header {
         height: 150px;
     }
+    #Home {
+        height: 600px;
+    }
     .presentationbckgrndLight {
         font-size: 350px;
         margin-left: 1px;
@@ -180,11 +160,8 @@ a {
 }
 
 @media only screen and (max-width: 800px) {
-    #secondBoxLight {
-        margin-left: 0px;
-    }
-    #secondBoxDark {
-        margin-left: 0px;
+    #Home {
+        height: 560px;
     }
     #mainBoxLight {
         margin-left: 0px;
@@ -234,12 +211,6 @@ a {
     }
     .presentationbckgrndDark {
         display: none;
-    }
-    #secondBoxLight {
-        margin-left: 0px;
-    }
-    #secondBoxDark {
-        margin-left: 0px;
     }
     .subtitle {
         margin-left: 0px;

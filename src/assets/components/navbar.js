@@ -15,11 +15,11 @@ class Navbar extends Component {
                 </a>
                 <ul className="iconList">
                     <a href="#Home">
-                        <li className={this.props.IconTheme}><img draggable="false" width={50} src={require('../images/home.png')} /><p>Home</p></li>
+                        <li className={this.props.IconTheme}><img alt="home" draggable="false" width={50} src={require('../images/home.png')} /><p>Home</p></li>
                     </a>
                     <br />
-                    <a href="#secondBox">
-                        <li className={this.props.IconTheme}><img draggable="false" width={50} src={require('../images/code.png')} /><p>Projects</p></li>
+                    <a href="#Projects">
+                        <li className={this.props.IconTheme}><img alt="code" draggable="false" width={50} src={require('../images/code.png')} /><p>Projects</p></li>
                     </a>
                 </ul>
                 <div className="switch">
