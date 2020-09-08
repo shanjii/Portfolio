@@ -102,7 +102,7 @@
 @media only screen and (max-width: 800px) {
     #Projects {
         margin-top: 0;
-        margin-left: 20px;
+        margin-left: 0px;
     }
     #secondBoxLight {
         margin-left: 0px;
@@ -110,8 +110,24 @@
     #secondBoxDark {
         margin-left: 0px;
     }
+    #boxSlideActiveLight {
+        width: 100vw;
+    }
+    #boxSlideLight {
+        width: 100vw;
+    }
+    #boxSlideActiveDark {
+        width: 100vw;
+    }
+    #boxSlideDark {
+        width: 100vw;
+    }
+    .projectText {
+        font-size: 13px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
 }
-
 
 @media only screen and (max-width: 1366px) {
     #Projects {
@@ -121,20 +137,40 @@
 
 @media only screen and (max-width: 1050px) {
     #boxSlideActiveLight {
-        width: 550px;
+        width: 700px;
     }
     #boxSlideLight {
-        width: 550px;
+        width: 700px;
     }
     #boxSlideActiveDark {
-        width: 550px;
+        width: 700px;
     }
     #boxSlideDark {
-        width: 550px;
+        width: 700px;
     }
     .projectText {
         font-size: 13px;
         margin-left: 10px;
         margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .projectImage {
+        display: none;
+    }
+    #boxSlideActiveLight {
+        width: 100vw;
+        height: 200px;
+    }
+    #boxSlideLight {
+        height: 200px;
+    }
+    #boxSlideActiveDark {
+        width: 100vw;
+        height: 200px;
+    }
+    #boxSlideDark {
+        height: 200px;
     }
 }
